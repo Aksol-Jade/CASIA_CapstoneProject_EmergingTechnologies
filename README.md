@@ -141,20 +141,20 @@ D. Real-World Implications
 
 ### Regression Models (Target: `exam_score`)
 
-| Model                         | Mean R² | Mean MAE | Mean RMSE |
-|------------------------------|---------|----------|-----------|
-| Linear Regression (CV)       | 0.896   | 0.254    | 0.319     |
-| Decision Tree Regressor (CV) | 0.686   | 0.431    | 0.554     |
-| Decision Tree (GridSearchCV) | —       | —        | 0.499     |
-| Random Forest Regressor (CV) | 0.862   | 0.295    | 0.368     |
-| Random Forest (GridSearchCV) | 0.977   | 0.115    | 0.150     |
+| Model                              | Mean R² | Mean MAE | Mean RMSE |
+|-----------------------------------|---------|----------|-----------|
+| Linear Regression (CV)            | 0.896   | 0.254    | 0.319     |
+| Decision Tree Regressor (CV)      | 0.686   | 0.431    | 0.554     |
+| Decision Tree (GridSearchCV)      | 0.908   | 0.228    | 0.299     |
+| Random Forest Regressor (CV)      | 0.862   | 0.295    | 0.368     |
+| **Random Forest (GridSearchCV, Test Set)** | **0.977** | **0.115** | **0.150** |
 
 ### Classification Models (Target: `performance_group`)
 
-| Model                         | CV Accuracy | CV F1 (Macro) |
-|------------------------------|-------------|---------------|
-| Decision Tree Classifier     | 0.684       | 0.696         |
-| Logistic Regression Classifier | 0.817     | 0.819         |
+| Model                             | CV Accuracy | CV F1 (Macro) |
+|----------------------------------|-------------|---------------|
+| Decision Tree Classifier         | 0.684       | 0.696         |
+| Logistic Regression Classifier   | 0.817       | 0.819         |
 
 ---
 
