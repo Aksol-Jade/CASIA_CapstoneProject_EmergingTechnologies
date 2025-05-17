@@ -69,6 +69,95 @@ Students were grouped into `Low`, `Average`, and `High` performers using quantil
   - CV F1 (macro): 0.819
   - Best params from GridSearchCV: `C=100`, `penalty='l2'`
 
+---
+
+## Table of Contents
+
+### I. Project Introduction
+
+### II. Project Goals
+
+### III. Project Components
+
+1. **Problem Definition**
+
+2. **Data Understanding and Preprocessing**
+   - Loading Data  
+   - Data Information Summary  
+   - Patching Missing Data  
+     - Null Checker  
+   - Categorical Values  
+   - Scaling  
+   - Feature Engineering  
+
+3. **Exploratory Data Analysis**
+   - Feature Histogram  
+   - Feature vs Exam Score Scatter Plot  
+   - Feature vs Exam Score Box Plot  
+   - Feature Correlation Heatmap  
+
+4. **Clustering (Unsupervised Learning)**
+   - Apply K-Means clustering using lifestyle features (excluding exam score)  
+   - Determine optimal K using:  
+     - Elbow method (Inertia Plot)  
+     - Silhouette Score  
+   - K-Means clustering labeling and description  
+
+5. **Regression Analysis (Supervised Learning)**
+
+   **Using Linear Regression**  
+   - Train/Test Split 70/30  
+   - Model Evaluation  
+   - Cross-Validation  
+   - Result Visualization  
+
+   **Decision Tree Regressor**  
+   - Model Evaluation (70/30 Split and GridSearchCV)  
+   - Model Visualization  
+
+   **Random Forest Regressor**  
+   - Model Evaluation (70/30 Split, Cross-Validation, GridSearchCV)  
+   - Model Visualization  
+
+6. **Optional Classification Task**
+   - Classification of Data into `performance_group`  
+   - Decision Tree Classification (70/30 Split, CV, GridSearchCV, Confusion Matrix)  
+   - Logistic Regression Classification (CV, GridSearchCV, Confusion Matrix)  
+
+### IV. Interpretation and Insights
+
+A. Feature Importance  
+B. Cluster Profiling  
+C. Model Performance  
+   - Model Evaluation Summary (Regression)  
+   - Trade-Off: Interpretability vs Accuracy  
+D. Real-World Implications  
+   - Actionable Advice Based on Findings  
+   - Surprising or Counter-Intuitive Results  
+
+---
+
+## Summary of Results
+
+### Regression Models (Target: `exam_score`)
+
+| Model                         | Mean R² | Mean MAE | Mean RMSE |
+|------------------------------|---------|----------|-----------|
+| Linear Regression (CV)       | 0.896   | 0.254    | 0.319     |
+| Decision Tree Regressor (CV) | 0.686   | 0.431    | 0.554     |
+| Decision Tree (GridSearchCV) | —       | —        | 0.499     |
+| Random Forest Regressor (CV) | 0.862   | 0.295    | 0.368     |
+| Random Forest (GridSearchCV) | 0.977   | 0.115    | 0.150     |
+
+### Classification Models (Target: `performance_group`)
+
+| Model                         | CV Accuracy | CV F1 (Macro) |
+|------------------------------|-------------|---------------|
+| Decision Tree Classifier     | 0.684       | 0.696         |
+| Logistic Regression Classifier | 0.817     | 0.819         |
+
+---
+
 ## Key Insights
 
 - `study_hours_per_day`, `mental_health_rating`, and `productive_hours` consistently ranked as the top predictors across all models.
